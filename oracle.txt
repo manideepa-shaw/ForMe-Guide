@@ -1,0 +1,21 @@
+
+alter session set "_oracle_script" =true;
+
+create user trial identified by "1234" default tablespace users quota unlimited on users;
+
+grant resource, connect, create table, create session to trial;
+
+
+=================to create table==========================
+create table places(
+id number primary key,
+title varchar2(35),
+description varchar2(100),
+creator varchar2(30)
+)
+===============================insert data=======================
+
+insert into places values(2,'Victoria','Great','u5');
+insert into places values(3,'Jamshedpur','It was amazing','u1');
+insert into places values(4,'Durgapur','Not a good place','u1');
+insert into places values(5,'Agra Fort','It was amazing','u5');
